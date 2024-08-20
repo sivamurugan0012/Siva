@@ -375,18 +375,5 @@ const     outernav = document.querySelector('.outer-nav');
       document.querySelector('.header--cta')?.classList.remove('is-active');
     }
   }
-  sendEmail() {
-    const templateParams = {
-      to_name: 'Recipient Name',
-      from_name: 'Your Name',
-      message: 'This is a test email from Angular using EmailJS.'
-    };
-
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
-      .then((response: EmailJSResponseStatus) => {
-         console.log('SUCCESS!', response.status, response.text);
-      }, (error) => {
-         console.error('FAILED...', error);
-      });
-  }
+  
 }
